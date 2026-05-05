@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Employee Registration</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #dbeafe, #f0fdf4);
+    }
+
+    .container {
+      width: 400px;
+      margin: 40px auto;
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0px 0px 15px gray;
+    }
+
+    h1, h2, h3 {
+      text-align: center;
+      margin: 5px;
+    }
+
+    h1 {
+      color: #1e3a8a;
+    }
+
+    h2 {
+      color: #16a34a;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .gender {
+      margin-bottom: 15px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #1e3a8a;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #2563eb;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Assignment 7</h1>
+  <h2>Employee Registration Form</h2>
+  <h3>Name: Sushant Sudhakar Patil</h3>
+  <h3>Roll No: 96</h3>
+
+  <div class="container">
+    <form method="post">
+
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+
+      <label for="phone">Phone Number (10 digits only)</label>
+      <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="e.g. 8624869662" required>
+
+      <label for="email">Email (must be a Gmail address)</label>
+      <input type="email" id="email" name="email" pattern="^[a-zA-Z0-9._%+-]+@gmail\.com$" placeholder="example@gmail.com" required>
+
+      <label for="department">Department</label>
+      <select id="department" name="department" required>
+        <option value="">-- Select Department --</option>
+        <option value="Technical">Technical</option>
+        <option value="Sales">Sales</option>
+        <option value="Management">Management</option>
+        <option value="Finance">Finance</option>
+      </select>
+
+      <div class="gender">
+        <label>Gender</label><br>
+        <input type="radio" name="gender" value="Male" required> Male
+        <input type="radio" name="gender" value="Female"> Female
+        <input type="radio" name="gender" value="Other"> Other
+      </div>
+
+      <button type="submit">Register</button>
+
+    </form>
+  </div>
+
+</body>
+</html>

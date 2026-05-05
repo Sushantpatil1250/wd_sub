@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML Practicals</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Segoe UI', Tahoma, sans-serif;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    /* Background Image + Overlay */
+    background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
+    url('coo.jpg');
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    animation:fadeIn 1s ease;
+}
+
+/* Container */
+.container{
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(12px);
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.5);
+    width:90%;
+    max-width:800px;
+
+    animation:fadeUp 1s ease;
+}
+
+h1{
+    color:#00e5ff;
+    margin-bottom:30px;
+    font-size:32px;
+    text-shadow:0 0 15px rgba(0,229,255,0.7);
+
+    animation:slideDown 1s ease;
+}
+
+.button-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+/* Buttons */
+.btn{
+    text-decoration:none;
+    color:white;
+    padding:18px 35px;
+    border-radius:12px;
+    font-size:18px;
+
+    background: linear-gradient(135deg,#94e466,#3333ff);
+
+    transition:all 0.3s ease;
+    box-shadow:0 6px 25px rgba(0,0,0,0.4);
+
+    animation:popUp 0.6s ease;
+}
+
+.btn:hover{
+    transform:translateY(-8px) scale(1.1);
+    background: linear-gradient(135deg,#3333ff,#ff00cc);
+    box-shadow:0 12px 35px rgba(0,0,0,0.6),
+               0 0 25px rgba(255,0,204,0.7);
+}
+
+/* Animations */
+@keyframes fadeIn{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+
+@keyframes slideDown{
+    from{
+        transform:translateY(-40px);
+        opacity:0;
+    }
+    to{
+        transform:translateY(0);
+        opacity:1;
+    }
+}
+
+@keyframes fadeUp{
+    from{
+        transform:translateY(40px);
+        opacity:0;
+    }
+    to{
+        transform:translateY(0);
+        opacity:1;
+    }
+}
+
+@keyframes popUp{
+    from{
+        transform:scale(0.8);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+/* Responsive */
+@media(max-width:600px){
+    h1{
+        font-size:24px;
+    }
+    .btn{
+        width:100%;
+        text-align:center;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Sushant HTML Practicals</h1>
+
+    <div class="button-container">
+        <a href="practicle_1.html" class="btn">Practical 01</a>
+        <a href="practicle_2.html" class="btn">Practical 02</a>
+        <a href="practicle_3.html" class="btn">Practical 03</a>
+        <a href="practicle_4.html" class="btn">Practical 04</a>
+        <a href="practicle_5.html" class="btn">Practical 05</a>
+        <a href="practicle_6.html" class="btn">Practical 06</a>
+        <a href="practicle_7.html" class="btn">Practical 07</a>
+        <a href="practicle_8.html" class="btn">Practical 08</a>
+        <a href="practicle_9.html" class="btn">Practical 09</a>
+        <a href="practicle_10.html" class="btn">Practical 10</a>
+    </div>
+</div>
+
+</body>
+</html>

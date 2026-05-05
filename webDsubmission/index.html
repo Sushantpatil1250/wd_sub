@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sushant Assignment</title>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    /* Background Image Added */
+    background: url('co.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Container */
+.container{
+    text-align:center;
+    padding:50px 40px;
+    border-radius:20px;
+    backdrop-filter: blur(12px);
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    animation: fadeIn 1s ease;
+}
+
+h1{
+    color:#fff;
+    margin-bottom:35px;
+    font-size:30px;
+}
+
+/* Buttons layout */
+.button-container{
+    display:flex;
+    gap:20px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+/* Base Button */
+.btn{
+    position:relative;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    text-decoration:none;
+    color:white;
+    padding:14px 28px;
+    border-radius:12px;
+    font-size:18px;
+    font-weight:500;
+    overflow:hidden;
+    transition: all 0.3s ease;
+}
+
+/* Unique Colors */
+.html { background: linear-gradient(135deg, #ff6a00, #ff3c00); }
+.css  { background: linear-gradient(135deg, #2193b0, #6dd5ed); }
+.xml  { background: linear-gradient(135deg, #11998e, #38ef7d); }
+
+/* Icon animation */
+.btn i{
+    font-size:20px;
+    animation: float 2s infinite ease-in-out;
+}
+
+/* Hover */
+.btn:hover{
+    transform: translateY(-6px) scale(1.07);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+}
+
+/* Click ripple effect */
+.btn::after{
+    content:"";
+    position:absolute;
+    width:0;
+    height:0;
+    background: rgba(255,255,255,0.4);
+    border-radius:50%;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    transition:0.5s;
+}
+
+.btn:active::after{
+    width:200px;
+    height:200px;
+    opacity:0;
+}
+
+/* Floating animation */
+@keyframes float{
+    0%,100%{ transform:translateY(0); }
+    50%{ transform:translateY(-5px); }
+}
+
+/* Fade in */
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Responsive */
+@media(max-width:500px){
+    .container{
+        width:90%;
+        padding:30px;
+    }
+    .btn{
+        width:100%;
+        justify-content:center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Sushant Web Development Assignments</h1>
+
+    <div class="button-container">
+        <a href="./WD/HTML/index2.html" class="btn html">
+            <i class="fa-brands fa-html5"></i> HTML
+        </a>
+
+        <a href="./WD/CSS/index1.html" class="btn css">
+            <i class="fa-brands fa-css3-alt"></i> CSS
+        </a>
+
+        <a href="./WD/XML/index3.html" class="btn xml">
+            <i class="fa-solid fa-code"></i> XML
+        </a>
+    </div>
+</div>
+
+</body>
+</html>

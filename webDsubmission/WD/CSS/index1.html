@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CSS Practicals</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      min-height: 100vh;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:flex-start;
+
+      background: 
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
+        url('coo.jpg');
+
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      animation: fadeIn 1s ease;
+    }
+
+    h1 {
+      margin-top: 40px;
+      font-size: 2.5em;
+      color: #00e5ff;
+      letter-spacing: 1px;
+      text-shadow: 0 0 15px rgba(0,229,255,0.7);
+
+      animation: slideDown 1s ease;
+    }
+
+    .button-container {
+      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      justify-content: center;
+      padding: 35px;
+
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(12px);
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+
+      animation: fadeUp 1s ease;
+    }
+
+    .btn {
+      padding: 18px 40px;   /* 🔥 Increased size */
+      font-size: 20px;      /* 🔥 Bigger text */
+      text-decoration: none;
+      color: white;
+      border-radius: 12px;
+
+      background: linear-gradient(135deg, #f3df4c, #3333ff);
+
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 25px rgba(0,0,0,0.4);
+
+      animation: popUp 0.6s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-8px) scale(1.1);
+      background: linear-gradient(135deg, #3333ff, #ff00cc);
+      box-shadow: 0 12px 35px rgba(0,0,0,0.6),
+                  0 0 25px rgba(255,0,204,0.7);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity:0; }
+      to { opacity:1; }
+    }
+
+    @keyframes slideDown {
+      from {
+        transform: translateY(-40px);
+        opacity:0;
+      }
+      to {
+        transform: translateY(0);
+        opacity:1;
+      }
+    }
+
+    @keyframes fadeUp {
+      from {
+        transform: translateY(40px);
+        opacity:0;
+      }
+      to {
+        transform: translateY(0);
+        opacity:1;
+      }
+    }
+
+    @keyframes popUp {
+      from {
+        transform: scale(0.8);
+        opacity:0;
+      }
+      to {
+        transform: scale(1);
+        opacity:1;
+      }
+    }
+
+    /* Responsive */
+    @media(max-width:600px){
+      h1{
+        font-size:1.8em;
+        text-align:center;
+      }
+      .btn{
+        width:100%;
+        text-align:center;
+        font-size:18px;
+        padding:15px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <h1>Sushant CSS Practicals</h1>
+
+  <div class="button-container">
+    <a href="practicle_1.htm" class="btn">Practical 01</a>
+    <a href="practicle_2.htm" class="btn">Practical 02</a>
+    <a href="practicle_3.htm" class="btn">Practical 03</a>
+    <a href="practicle_4.htm" class="btn">Practical 04</a>
+    <a href="practicle_5.htm" class="btn">Practical 05</a>
+    <a href="practicle_6.htm" class="btn">Practical 06</a>
+    <a href="practicle_7.htm" class="btn">Practical 07</a>
+    <a href="practicle_8.htm" class="btn">Practical 08</a>
+    <a href="practicle_9.htm" class="btn">Practical 09</a>
+    <a href="practicle_10.htm" class="btn">Practical 10</a>
+  </div>
+
+</body>
+</html>

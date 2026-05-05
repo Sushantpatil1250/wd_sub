@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S.Y. - A Timetable 2025-2026</title>
+    <style>
+        :root {
+            --primary-blue: #1a73e8;
+            --bg-gray: #f8f9fa;
+            --border-color: #dadce0;
+            --text-dark: #202124;
+            --lab-bg: #ffffff;
+            --break-bg: #f1f3f4;
+        }
+
+        body { 
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+            background-color: var(--bg-gray);
+            color: var(--text-dark);
+            margin: 20px; 
+            line-height: 1.4;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .header { 
+            text-align: center; 
+            margin-bottom: 25px; 
+            border-bottom: 2px solid var(--primary-blue);
+            padding-bottom: 15px;
+        }
+
+        .header h1 { margin: 0; font-size: 1.4rem; color: var(--primary-blue); }
+        .header h2 { margin: 5px 0; font-size: 1.1rem; font-weight: 500; }
+        .header p { margin: 0; font-size: 0.9rem; color: #5f6368; }
+
+        table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            table-layout: fixed; 
+            background: white;
+        }
+
+        th, td { 
+            border: 1px solid var(--border-color); 
+            text-align: center; 
+            padding: 8px 4px; 
+            font-size: 0.85rem;
+        }
+
+        th { 
+            background-color: var(--primary-blue); 
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Styling for the S1-S6 Batch Boxes */
+        .batch-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4px;
+            text-align: left;
+            font-size: 0.75rem;
+        }
+
+        .batch-item {
+            background: #fdfdfd;
+            border: 1px solid #eee;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+
+        .batch-item b { color: var(--primary-blue); }
+
+        /* Break Column */
+        .break { 
+            width: 35px; 
+            font-weight: bold; 
+            background-color: var(--break-bg); 
+            color: #70757a;
+            letter-spacing: 2px;
+            font-size: 0.7rem;
+        }
+
+        /* Subjects and Faculty */
+        .subject-name { 
+            font-weight: bold; 
+            display: block; 
+            color: #1967d2;
+            margin-bottom: 2px;
+        }
+        .faculty-name { font-size: 0.75rem; color: #5f6368; }
+
+        /* Day Labels */
+        .day-label {
+            background-color: #f8f9fa;
+            font-weight: bold;
+            color: var(--primary-blue);
+            width: 90px;
+        }
+
+        /* Hover Effect */
+        tr:hover td { background-color: #f1f3f4; transition: 0.2s; }
+
+        .footer-info {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            font-weight: 500;
+            color: #3c4043;
+            border-top: 1px solid var(--border-color);
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>D. Y. Patil College of Engineering & Technology, Kolhapur</h1>
+        <h2>Department of Computer Science & Engineering</h2>
+        <p>Time Table 2025-2026 (SEM-II) | <b>S.Y. - A</b> | w.e.f. 19th Jan 2026</p>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 90px;">Day & Time</th>
+                <th>9.00 to 11.00</th>
+                <th class="break"></th>
+                <th>11.15 to 12.15</th>
+                <th>12.15 to 1.15</th>
+                <th class="break"></th>
+                <th>2.00 to 3.00</th>
+                <th>3.00 to 4.00</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="day-label">Monday</td>
+                <td>
+                    <div class="batch-grid">
+                        <div class="batch-item"><b>S1:</b> DSL-G405C</div>
+                        <div class="batch-item"><b>S2:</b> AOOC-G207</div>
+                        <div class="batch-item"><b>S3:</b> TPMS-G406</div>
+                        <div class="batch-item"><b>S4:</b> WD-G106</div>
+                        <div class="batch-item"><b>S5:</b> TTL-G205</div>
+                        <div class="batch-item"><b>S6:</b> TTL-G206</div>
+                    </div>
+                </td>
+                <td rowspan="6" class="break">B<br>R<br>E<br>A<br>K</td>
+                <td><span class="subject-name">AOOC(L)</span><span class="faculty-name">PVK</span></td>
+                <td><span class="subject-name">MDM-II(L)</span><span class="faculty-name">NAH</span></td>
+                <td rowspan="6" class="break">B<br>R<br>E<br>A<br>K</td>
+                <td><span class="subject-name">DSL(L)</span><span class="faculty-name">AMP</span></td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td class="day-label">Tuesday</td>
+                <td>
+                    <div class="batch-grid">
+                        <div class="batch-item"><b>S1:</b> TTL-G105</div>
+                        <div class="batch-item"><b>S2:</b> DSL-G405C</div>
+                        <div class="batch-item"><b>S3:</b> AOOC-G207</div>
+                        <div class="batch-item"><b>S4:</b> TPMS-G406</div>
+                        <div class="batch-item"><b>S5:</b> WD-G106</div>
+                        <div class="batch-item"><b>S6:</b> TTL-G103</div>
+                    </div>
+                </td>
+                <td><span class="subject-name">AT(L)</span><span class="faculty-name">KAB</span></td>
+                <td><span class="subject-name">DSL(L)</span><span class="faculty-name">AMP</span></td>
+                <td><span class="subject-name">WD(L)</span><span class="faculty-name">SSKore</span></td>
+                <td><span class="subject-name">ENV(L)</span></td>
+            </tr>
+            <tr>
+                <td class="day-label">Wednesday</td>
+                <td>
+                    <div class="batch-grid">
+                        <div class="batch-item"><b>S1:</b> TTL-G205</div>
+                        <div class="batch-item"><b>S2:</b> TTL-B201A</div>
+                        <div class="batch-item"><b>S3:</b> DSL-G405C</div>
+                        <div class="batch-item"><b>S4:</b> AOOC-G207</div>
+                        <div class="batch-item"><b>S5:</b> TPMS-G406</div>
+                        <div class="batch-item"><b>S6:</b> WD-G106</div>
+                    </div>
+                </td>
+                <td><span class="subject-name">AOOC(L)</span><span class="faculty-name">PVK</span></td>
+                <td><span class="subject-name">MDM-II(L)</span><span class="faculty-name">NAH</span></td>
+                <td><span class="subject-name">DSL(L)</span><span class="faculty-name">AMP</span></td>
+                <td><span class="subject-name">ENV(L)</span></td>
+            </tr>
+            <tr>
+                <td class="day-label">Thursday</td>
+                <td>
+                    <div class="batch-grid">
+                        <div class="batch-item"><b>S1:</b> WD-G106</div>
+                        <div class="batch-item"><b>S2:</b> TTL-G101</div>
+                        <div class="batch-item"><b>S3:</b> TTL-G103</div>
+                        <div class="batch-item"><b>S4:</b> DSL-G405C</div>
+                        <div class="batch-item"><b>S5:</b> AOOC-G207</div>
+                        <div class="batch-item"><b>S6:</b> TPMS-G406</div>
+                    </div>
+                </td>
+                <td><span class="subject-name">AT(L)</span><span class="faculty-name">KAB</span></td>
+                <td><span class="subject-name">AT(L)</span><span class="faculty-name">KAB</span></td>
+                <td>-</td>
+                <td><span class="subject-name">OEC-II(L)</span></td>
+            </tr>
+            <tr>
+                <td class="day-label">Friday</td>
+                <td>
+                    <div class="batch-grid">
+                        <div class="batch-item"><b>S1:</b> TPMS-G406</div>
+                        <div class="batch-item"><b>S2:</b> WD-G106</div>
+                        <div class="batch-item"><b>S3:</b> TTL-B201B</div>
+                        <div class="batch-item"><b>S4:</b> TTL-B201A</div>
+                        <div class="batch-item"><b>S5:</b> DSL-G405C</div>
+                        <div class="batch-item"><b>S6:</b> AOOC-G105</div>
+                    </div>
+                </td>
+                <td colspan="2">
+                    <div class="batch-grid">
+                        <div class="batch-item"><b>S1:</b> AOOC-G207</div>
+                        <div class="batch-item"><b>S2:</b> TPMS-G406</div>
+                        <div class="batch-item"><b>S3:</b> WD-G106</div>
+                        <div class="batch-item"><b>S4:</b> TTL-G103</div>
+                        <div class="batch-item"><b>S5:</b> TTL-G101</div>
+                        <div class="batch-item"><b>S6:</b> DSL-G405C</div>
+                    </div>
+                </td>
+                <td><span class="subject-name">TPMS(L)</span><span class="faculty-name">PRP</span></td>
+                <td><span class="subject-name">OEC-II(L)</span></td>
+            </tr>
+            <tr>
+                <td class="day-label">Saturday</td>
+                <td colspan="2"><span class="subject-name">LLC-PRP</span></td>
+                <td colspan="2"><span class="subject-name">LLC-PRP</span></td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        </tbody>
+    </table>
+
+    
+</div>
+
+</body>
+</html>
